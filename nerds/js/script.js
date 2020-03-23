@@ -72,7 +72,7 @@
 			var arrSliderControls = document.querySelectorAll(".slider-control");
 			var arrSlides = document.querySelectorAll(".slider-item");
 			var currentSlide = 0;
-			// var slideInterval = setInterval(nextSlide, 2000);
+			var slideInterval = setInterval(nextSlide, 2000);
 			
 				function nextSlide(){
 					arrSlides[currentSlide].className = "slider-item";
