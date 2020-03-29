@@ -74,9 +74,33 @@
       <h1>Заинтересовались?</h1>
       <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
       <div class="search-form">
-        <h2>поиск гостиницы в Cедоне</h2>
-        <form class="" action="index.html" method="post">
-
+        <button type="button" class="button" name="open-form">
+          <h2>поиск гостиницы в Cедоне</h2>
+        </button>
+        <form class="modal" action="index.html" method="post">
+           <label>
+            дата заезда:
+            <input type="text" name="check-in" value="" placeholder="24 апреля 2017">
+           </label>
+           <img src="calendar.svg" alt="" id="calendar-check-in">
+          <label>
+           дата выезда:
+           <input type="text" name="check-out" value="" placeholder="4 июля 2017">
+          </label>
+          <img src="calendar.svg" alt="" id="calendar-check-out">
+          <label for="adults">взрослые:</label>
+          <p>
+            <span>-</span>
+            <input type="number" id="adults" name="adults" value="2">
+            <span>+</span>
+          </p>
+          <label for="children">дети:</label>
+          <p>
+            <span>-</span>
+            <input type="number" id="children" name="children" value="0">
+            <span>+</span>
+          </p>
+          <button type="submit" class="button">Найти</button>
         </form>
       </div>
       <div class="map">

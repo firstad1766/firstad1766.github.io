@@ -24,20 +24,78 @@
     <section class="filters">
       <h2 class="visually-hidden">Форма поиска отелей</h2>
       <form class="form-filters" action="https://echo.htmlacademy.ru" method="post">
-
+        <fieldset class="filter-infrastructure">
+          <legend>инфраструктура:</legend>
+          <ul>
+            <li>
+              <label>
+              <input type="checkbox" name="swimming-pool" checked>
+              Бассейн
+              </label>
+            </li>
+            <li>
+              <label>
+              <input type="checkbox" name="parking">
+              Парковка
+              </label>
+            </li>
+            <li>
+              <label>
+              <input type="checkbox" name="wifi">
+              WI-FI
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="filter-housing-type">
+          <legend>тип жилья:</legend>
+          <ul>
+            <li>
+              <label>
+              <input type="checkbox" name="hotel" checked>
+              Гостиница
+            </label>
+            </li>
+            <li>
+              <label>
+              <input type="checkbox" name="motel">
+              Мотель
+              </label>
+            </li>
+            <li>
+              <label>
+              <input type="checkbox" name="apartment">
+              Аппартаменты
+            </label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="filter-cost">
+          <legend>Стоимость в сутки (Р):</legend>
+          <label>
+            от
+            <input type="number" name="cost-min" value="0">
+          </label>
+          <label>
+            до
+            <input type="number" name="cost-max" value="3000">
+          </label>
+          <div class="cost-range"></div>
+        </fieldset>
+        <button type="submit" class="button">Показать</button>
       </form>
       <div class="extra-filters">
         <span>Найдено: 3</span>
         <div class="sort">
           Cортировка:
           <ul class="sort-type">
-            <li>по цене</li>
-            <li>по типу</li>
-            <li>по рейтингу</li>
+            <li><a class="sort-current" >по цене</a></li>
+            <li><a href="#">по типу</a></li>
+            <li><a href="#">по рейтингу</a></li>
           </ul>
           <ul class="sort-direction">
-            <li><span>по возрастанию</span></li>
-            <li><span>по убыванию</span></li>
+            <li><a class="ditection-current"><span>по возрастанию</span></a></li>
+            <li><a href="#"></a><span>по убыванию</span></a></li>
           </ul>
         </div>
       </div>
@@ -45,7 +103,7 @@
     <section class="hotels">
           <table class="hotel">
             <tr>
-              <td rowspan="3"><img src="img/amara.jpg" alt="Amara Resort & Spa" width="135" height="90"></td>
+              <td rowspan="3"><img src="img/hotel-amara.jpg" alt="Amara Resort & Spa" width="135" height="90"></td>
               <td colspan="2"><h3>Amara Resort & Spa</h3></td>
               <td><img src="img/star.svg"><img src="img/star.svg"><img src="img/star.svg"><img src="img/star.svg"></td>
             </tr>
