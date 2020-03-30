@@ -1,0 +1,177 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #333333;
+  text-transform: uppercase;
+
+  background-color: #f2f2f2;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button {
+
+}
+
+/* HEADER */
+
+.site-nav {
+  line-height: 26px;
+  color: #000000;
+  list-style: none;
+
+  background-color: #ffffff;
+}
+
+.site-nav a {
+  color: #000000;
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+  color: #81b3d2;
+}
+
+.site-nav a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.site-nav .site-nav-current {
+  color: #766357;
+}
+
+/* MAIN */
+
+.page-title {
+  magrin: 0;
+  padding: 0;
+
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700px;
+  color: #000000;
+  text-align: center;
+}
+
+.subtitle {
+  margin: 0;
+  padding: 0;
+
+  line-height: 26px;
+  text-align: center;
+}
+
+.reason h2 {
+  margin: 0;
+  padding: 0;
+
+  font-size: 21px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.reason p {
+  margin: 0;
+  padding: 0;
+}
+
+.reason.blue {
+  color: #ffffff;
+
+  background-color: #81b3d2;
+}
+
+.reason.gray {
+  background-color: #eeeeee;
+}
+
+.reason.gray h2 {
+  color: #000000;
+}
+
+.hotel-search .interested {
+  margin: 0;
+  padding: 0;
+
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.hotel-search .info {
+  line-height: 24px;
+  text-align: center;
+}
+
+.search-form .toggle-form {
+  width: 570px;
+  height: 85px;
+  margin: 0;
+  padding: 0;
+
+  line-height: 26px;
+  font-weight: 700;
+  color: #ffffff;
+
+  background-color: #766357;
+}
+
+.modal label {
+  font: inherit;
+  line-height: 26px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.modal input {
+  font: inherit;
+  line-height: 26px;
+  font-weight: 700;
+  color: #000000;
+
+  background-color: #f2f2f2;
+  border: none;
+}
+
+.modal input:hover {
+  background-color: #ebebeb;
+}
+
+.modal input:focus {
+  background-color: transparent;
+  border: 2px solid #e5e5e5;
+}
+
+.modal .button {
+  margin: 0;
+  padding: 0;
+
+  font: inherit;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #ffffff;
+
+  background-color: #81b3d2;
+}
+
+/* FOOTER */
+
+.visit-sedona {
+  line-height: 26px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.copyright {
+  line-height: 26px;
+  color: #000000;
+}
