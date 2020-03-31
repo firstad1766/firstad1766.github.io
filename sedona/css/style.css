@@ -65,8 +65,13 @@ a {
 /* HEADER */
 
 .site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 55px;
   margin: 0;
-  padding: 0;
+  padding: 0 70px;
 
   line-height: 26px;
   color: #000000;
@@ -76,7 +81,19 @@ a {
 }
 
 .site-nav a {
+  width: 265px;
+  padding: 15px 150px 15px 5px;
+
+  font-weight: 700;
   color: #000000;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.site-nav li:nth-child(3n) a,
+.site-nav li:nth-child(4n) a{
+  padding: 15px 5px 15px 150px;
+  text-align: right;
 }
 
 .site-nav a:hover,
@@ -92,10 +109,20 @@ a {
   color: #766357;
 }
 
+.logo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -69px;
+  width: 138px;
+  height: 70px;
+}
+
 /* MAIN */
 
 .page-title {
-  magrin: 0;
+  margin: 0;
+  margin-bottom: 30px;
   padding: 0;
 
   font-size: 21px;
@@ -107,26 +134,67 @@ a {
 
 .subtitle {
   margin: 0;
+  margin-bottom: 60px;
   padding: 0;
 
   line-height: 26px;
   text-align: center;
 }
 
+.intro {
+  height: 510px;
+  margin-bottom: 60px;
+
+  text-align: center;
+
+  background-color: #2b465e;
+  background-image: url("../img/bg.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.intro img {
+  margin-top: 80px;
+}
+
+.index-grid {
+  display: grid;
+  grid-template-columns: 400px 400px 400px;
+  grid-template-rows: 256px 330px 256px 256px;
+}
+
+.city-photo {
+  grid-column-start: span 2;
+
+}
+
+.devil-bridge {
+  grid-column-start: span 2;
+}
+
+.reason,
+.advice {
+  text-align: center;
+}
+
+.reason {
+  padding: 45px 60px 60px;
+}
+
+.advice {
+  padding: 60px 60px 80px;
+
+  background-color: #ffffff;
+}
+
 .reason h2,
-advice h2 {
+.advice h2 {
   margin: 0;
+  margin-bottom: 25px;
   padding: 0;
 
   font-size: 21px;
   font-weight: 700;
-  text-align: center;
-}
-
-.reason p {
-  margin: 0;
-  padding: 0;
-  text-align: center;
 }
 
 .reason.blue {
@@ -144,12 +212,27 @@ advice h2 {
   color: #000000;
 }
 
-.advice {
-  background-color: #ffffff;
+.advice img {
+  margin-bottom: 25px;
 }
 
-.hotel-search .interested {
+.reason p {
   margin: 0;
+  padding: 0;
+}
+
+.reason .reason-number {
+  margin-bottom: 25px;
+}
+
+.hotels-search {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.hotels-search .interested {
+  margin: 0;
+  margin-bottom: 30px;
   padding: 0;
 
   font-size: 30px;
@@ -158,9 +241,17 @@ advice h2 {
   color: #000000;
 }
 
-.hotel-search .info {
+.hotels-search .info {
+  margin: 0;
+  margin-bottom: 45px;
+  padding: 0;
+
   line-height: 24px;
   text-align: center;
+}
+
+.search-form {
+  position: relative;
 }
 
 .search-form .toggle-form {
@@ -169,11 +260,44 @@ advice h2 {
   margin: 0;
   padding: 0;
 
+  font-size: 21px;
   line-height: 26px;
   font-weight: 700;
   color: #ffffff;
 
   background-color: #766357;
+}
+
+.modal {
+  position: absolute;
+  left: 50%;
+  width: 570px;
+  min-height: 400px;
+  margin-left: -285px;
+  padding: 55px;
+  box-sizing: border-box;
+
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
+.modal .flex-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.flex-wrapper p {
+  width: 115px;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  color: #000000;
+
+  background-color: #f2f2f2;
 }
 
 .modal label {
@@ -183,11 +307,34 @@ advice h2 {
   color: #000000;
 }
 
-.modal input {
+.modal input[type="text"] {
+  width: 345px;
+  height: 40px;
+  padding: 10px;
+  box-sizing: border-box;
+
   font: inherit;
   line-height: 26px;
   font-weight: 700;
   color: #000000;
+  text-transform: uppercase;
+
+  background-color: #f2f2f2;
+  border: none;
+}
+
+.modal input[type="number"] {
+  width: 60px;
+  height: 40px;
+  padding: 10px 0;
+  box-sizing: border-box;
+
+  font: inherit;
+  line-height: 26px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+  text-align: center;
 
   background-color: #f2f2f2;
   border: none;
@@ -200,6 +347,33 @@ advice h2 {
 .modal input:focus {
   background-color: transparent;
   border: 2px solid #e5e5e5;
+}
+
+.modal .calendar {
+  position: absolute;
+  right: 10px;
+  width: 21px;
+  height: 22px;
+
+  fill: #cacaca;
+}
+
+.modal .calendar:hover,
+.modal .calendar:focus {
+  fill: #000000;
+}
+
+.modal .calendar:active {
+  fill: #81b3d2;
+}
+
+.modal .operator {
+  font: inherit;
+  font-weight: 700;
+  color: #a9a9a9;
+
+  background-color: transparent;
+  border: none;
 }
 
 .modal .button {
