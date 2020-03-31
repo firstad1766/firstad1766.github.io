@@ -1,5 +1,4 @@
 body {
-  width: 1260px;
   margin: 0;
   padding: 0;
 
@@ -15,11 +14,11 @@ body {
 
 .page-wrapper {
   width: 1200px;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
 
   background-color: #ffffff;
-  box-shadow: 0 0 2px 5px #000000;
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.3);
 }
 a {
   text-decoration: none;
