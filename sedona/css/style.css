@@ -291,6 +291,9 @@ a {
 }
 
 .flex-wrapper p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 115px;
   height: 40px;
   margin: 0;
@@ -307,7 +310,7 @@ a {
   color: #000000;
 }
 
-.modal input[type="text"] {
+.modal .date { /*input */
   width: 345px;
   height: 40px;
   padding: 10px;
@@ -323,7 +326,7 @@ a {
   border: none;
 }
 
-.modal input[type="number"] {
+.modal .guest {  /*input */
   width: 60px;
   height: 40px;
   padding: 10px 0;
@@ -345,8 +348,9 @@ a {
 }
 
 .modal input:focus {
-  background-color: transparent;
+  background-color: #ffffff;
   border: 2px solid #e5e5e5;
+  outline: none;
 }
 
 .modal .calendar {
@@ -368,12 +372,26 @@ a {
 }
 
 .modal .operator {
+  width: 18px;
+  height: 40px;
+  /* padding: */
+
   font: inherit;
   font-weight: 700;
   color: #a9a9a9;
 
   background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center center;
   border: none;
+}
+
+.modal .menos {
+  background-image: url("../img/menos.png");
+}
+
+.modal .plus {
+  background-image: url("../img/plus.png");
 }
 
 .modal .button {
