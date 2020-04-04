@@ -41,6 +41,7 @@ input[type="radio"].visually-hidden {
   background-color: #ffffff;
   box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.3);
 }
+
 a {
   text-decoration: none;
 }
@@ -55,6 +56,7 @@ img {
   padding: 5px 15px;
 
   font: inherit;
+  line-height: 21px;
   color: #ffffff;
   text-transform: uppercase;
   text-align: center;
@@ -107,8 +109,10 @@ img {
 }
 
 .site-nav a {
+  display: inline-block;
   width: 265px;
-  padding: 15px 150px 15px 5px;
+  padding: 15px 5px;
+  box-sizing: border-box;
 
   font-weight: 700;
   color: #000000;
@@ -116,9 +120,15 @@ img {
   vertical-align: middle;
 }
 
-.site-nav li:nth-child(3n) a,
-.site-nav li:nth-child(4n) a{
-  padding: 15px 5px 15px 150px;
+.site-nav .nav-narrow {
+  width: 240px;
+}
+
+.site-nav .nav-wide {
+  width: 290px;
+}
+
+.site-nav .nav-right {
   text-align: right;
 }
 
@@ -317,7 +327,7 @@ img {
   margin-bottom: 30px;
 }
 
-.flex-wrapper p {
+.flex-wrapper div {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -468,7 +478,7 @@ img {
   width: 460px;
   height: 60px;
   margin: 0;
-  margin-top: 55px;
+  margin-top: 25px; /* + 30px у полей формы */
   padding: 0;
 
   font: inherit;
@@ -497,19 +507,49 @@ img {
 /* INNER PAGES */
 
 .form-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 30px 70px;
+  box-sizing: border-box;
+
   font: inherit;
+  line-height: 21px;
   color:#ffffff;
   text-align: left;
 
-background-color: #81b3d2;
+  background-color: #81b3d2;
+  background-image: url("../img/filter-background.jpg");
+  background-repeat: no-repeat;
+}
+
+.form-filters fieldset {
+  margin: 0;
+  padding: 0;
+
+  border: none;
+}
+
+.form-filters .filter-infrastructure,
+.form-filters .filter-housing-type {
+  width: 250px;
+}
+
+.form-filters .filter-cost {
+  width: 315px;
 }
 
 .form-filters legend {
   margin: 0;
+  margin-bottom: 25px;
   padding: 0;
 
-  font-size: 21px;
-  line-height: 26px;
+  font-size: 16px;
+  line-height: 21px;
   font-weight: 700;
 }
 
@@ -520,48 +560,193 @@ background-color: #81b3d2;
   list-style: none;
 }
 
-.form-filters input {
-  font: inherit;
-  color: #ffffff;
+.form-filters li {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
 }
 
-.form-filters .button {
-  font: inherit;
-  color: #ffffff;
+.form-filters li:last-child {
+  margin-bottom: 0;
+}
+
+.filter-label { /* в .filter-infrastructure и .filter-housing-type */
+  position: relative;
+  margin: 0;
+  padding: 0;
+  padding-left: 40px;
+
+  cursor: pointer;
+}
+
+.filter-label::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: 0;
+  width: 19px;
+  height: 19px;
 
   background-color: transparent;
   border: 2px solid #ffffff;
   border-radius: 2px;
 }
 
-.form-filters .button:hover,
-.form-filters .button:focus,
-.form-filters .button:active {
+.form-filters input {
+  font: inherit;
+  line-height: 21px;
+
+  color: #ffffff;
+}
+
+ .filter-checkbox:checked ~ .filter-label::before {
+  width: 27px;
+  height: 23px;
+
+  background-image: url("../img/checkbox-on.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+ }
+
+.filter-checkbox:disabled ~ .filter-label::before {
+  border-color: #6a6a6a;
+}
+
+.column-right {
+  margin-left: auto;
+}
+
+.filter-cost legend {
+  margin-bottom: 10px;
+}
+
+.filter-cost .cost-inputs {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 310px;
+  height: 30px;
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
+
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+}
+
+.filter-cost .cost-inputs::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 4px;
+  width: 2px;
+  height: 22px;
+
+  background-color:  #ffffff;
+}
+
+.cost-inputs input {
+  width: 155px;
+  height: 30px;
+  padding: 10px;
+  box-sizing: border-box;
+
+  color: #ffffff;
+
+  background-color: transparent;
+  border: none;
+}
+
+.cost-inputs input::placeholder {
+  color: #ffffff;
+  text-align: center;
+}
+
+.filter-cost .cost-range {
+  margin-bottom: 20px;
+}
+
+.column-right .button-wrapper {
+  margin: 0;
+  padding: 0;
+
+  text-align: center;
+}
+
+.column-right .button {
+  width: 130px;
+  padding: 4px 15px;
+
+  font: inherit;
+  line-height: 21px;
+  color: #ffffff;
+
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+
+  cursor: pointer;
+}
+
+.column-right .button:hover,
+.column-right  .button:focus,
+.column-right  .button:active {
   color: #000000;
 
   background-color: #ffffff;
 }
 
-.extra-filters  .found {
+.extra-filters {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0 70px;
+  box-sizing: border-box;
+
+  font-size: 12px;
+  line-height: 18px;
+  color: #000000;
+}
+
+.extra-filters .found {
+  margin: 0;
+  margin-right: 45px;
+  padding: 0;
+
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
   color: #000000;
 }
 
-.extra-filters .sort {
-  font-size: 12px;
-  line-height: 18px;
-  color: #000000;
+.extra-filters .sort-header {
+  margin: 0;
+  margin-right: 40px;
+  padding: 0;
 }
 
 .extra-filters ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   margin: 0;
   padding: 0;
 
   list-style: none;
 }
 
+.sort-type li {
+  margin-right: 30px;
+}
+
+.sort-type li:last-child {
+  margin-right: 0;
+}
 .sort-type a {
   font-size: 12px;
   line-height: 18px;
@@ -586,12 +771,26 @@ background-color: #81b3d2;
   text-decoration: none;
 }
 
-.sort-direction .direction-current {
-
+.extra-filters .sort-direction {
+  margin-left: auto;
 }
 
-.hotel {
-  width: 100%;
+.sort-direction {
+  width: 35px;
+}
+
+.sort-direction li:last-child {
+  margin-left: auto;
+}
+
+.sort-direction a:hover path,
+.sort-direction a:focus path {
+  fill: #231f20;
+}
+
+.sort-direction a:active path,
+.direction-current path {
+  fill: #81b3d2;
 }
 
 .hotel .hotel-photo {
@@ -625,12 +824,21 @@ background-color: #81b3d2;
 
 /* FOOTER */
 
-.main-footer {
+.map-index {
+  padding-top: 470px;
+  background-image: url("../img/map.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.footer-wrapper {
   display: flex;
   justify-content: space-around;
   align-items: center;
-
+  width: 100%;
   min-height: 120px;
+
+  background-color: rgba(254, 254, 254, 0.9);
 }
 
 .visit-sedona {
