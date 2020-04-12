@@ -5,6 +5,7 @@
   <title>Отели в городе Седона</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic,cyrillic-ext,latin-ext">
   <link href="css/normalize.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/jquery-ui.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -80,7 +81,7 @@
                 <label class="visually-hidden" for="cost-max">до</label>
                 <input type="text" id="cost-max" name="cost-max" placeholder="ДО 3000">
               </p>
-              <div class="cost-range"></div>
+              <div id="cost-range"></div>
             </fieldset>
             <p class="button-wrapper">
               <button type="submit" class="button">Показать</button>
@@ -180,5 +181,9 @@
       </div>
     </footer>
   </div>
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
+  <script src="js/filter-range.js"></script>
 </body>
 </html>
