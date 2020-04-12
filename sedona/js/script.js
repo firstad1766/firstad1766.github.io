@@ -1,4 +1,5 @@
 var formSwitcher = document.querySelector(".toggle-form");
+var formWrapper = document.querySelector(".form-wrapper");
 var form = document.querySelector(".modal-form");
 var checkIn = form.querySelector("#check-in");
 var checkOut = form.querySelector("#check-out");
@@ -16,7 +17,7 @@ unredFields(formFields);
 
 formSwitcher.addEventListener("click", function(evt){
   evt.preventDefault();
-  form.classList.toggle("modal-show");
+  formWrapper.classList.toggle("modal-show");
   unredFields(formFields);
 });
 
