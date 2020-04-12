@@ -10,20 +10,20 @@
 			var nameStorage = "";
 			var emailStorage = "";
 			var isStorageSupport = true;
-			
+
 			try {
 				nameStorage = localStorage.getItem("fullname");
 			} catch(err) {
 				isStorageSupport = false;
 				console.log("не работает localStorage");
 			}
-			
+
 			try {
 				emailStorage = localStorage.getItem("email");
 			} catch(err) {
 				isStorageSupport = false;
 			}
-			
+
 			link.addEventListener("click", function(evt){
 				evt.preventDefault();
 				popup.classList.add("modal-show");
@@ -42,19 +42,19 @@
 					fullname.focus();
 				}
 			});
-			
+
 			closeModal.addEventListener("click", function(evt){
 				evt.preventDefault();
 				popup.classList.remove("modal-show");
 			});
-			
+
 			window.addEventListener("keydown", function(evt){
 				if (popup.classList.contains("modal-show") && evt.keyCode === 27){
 					evt.preventDefault();
 					popup.classList.remove("modal-show");
 				}
 			});
-			
+
 			form.addEventListener("submit", function(evt){
 				if(!fullname.value || !email.value || !message.value) {
 					evt.preventDefault();
@@ -68,12 +68,12 @@
 					}
 				}
 			});
-			
+
 			var arrSliderControls = document.querySelectorAll(".slider-control");
 			var arrSlides = document.querySelectorAll(".slider-item");
 			var currentSlide = 0;
 			var slideInterval = setInterval(nextSlide, 2000);
-			
+
 				function nextSlide(){
 					arrSlides[currentSlide].className = "slider-item";
 					arrSliderControls[currentSlide].classList.toggle("active");
@@ -81,3 +81,28 @@
 					arrSlides[currentSlide].className = "slider-item show-slide";
 					arrSliderControls[currentSlide].classList.toggle("active");
 				}
+				$(function(){
+					$("#cost-range").slider({
+					range:true,
+					min:0,
+					max:25000,
+					values:[0,15000],
+					slide:function(event,ui){
+					//Поле минимального значения
+					$( "#filter-min-cost" ).val(ui.values[ 0 ]);
+					 //Поле максимального значения
+					$("#filter-max-cost").val(ui.values[1]); }
+					});
+					//Записываем значения ползунков в момент загрузки страницы
+					//То есть значения по умолчанию
+					$( "#filter-min-cost" ).val($( "#cost-range" ).slider( "values", 0 ));
+					$("#filter-max-cost").val($("#cost-range").slider( "values", 1 ));
+				});
+				$('#filter-min-cost').change(function() {
+					var val = $(this).val();
+					$('#slider_price').slider("values",0,val);
+				});
+				$('#filter-max-cost').change(function() {
+					var val = $(this).val();
+					$('#slider_price').slider("values",0,val);
+				});
