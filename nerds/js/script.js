@@ -100,9 +100,9 @@
 				});
 				$('#filter-min-cost').change(function() {
 					var val = $(this).val();
-					$('#slider_price').slider("values",0,val);
+					$('#cost-range').slider("values",0,val);
 				});
 				$('#filter-max-cost').change(function() {
 					var val = $(this).val();
-					$('#slider_price').slider("values",0,val);
+					$('#cost-range').slider("values",0,val);
 				});
