@@ -69,6 +69,7 @@ img {
 .button:hover,
 .button:focus {
   background-color: #669ec0;
+  outline: none;
 }
 
 .button:active {
@@ -299,13 +300,13 @@ img {
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
-  color: #ffffff;
 
-  background-color: #766357;
   cursor: pointer;
 }
 
+/* модальные окна */
 .modal {
+  display: none;
   position: absolute;
   left: 50%;
   width: 570px;
@@ -502,6 +503,14 @@ img {
   color: rgba(256, 256, 256, 0.3);
 
   background-color: #5496bd;
+}
+
+.modal-show {
+  display: block;
+}
+
+.modal .modal-error {
+  border: solid 1px red;
 }
 
 /* INNER PAGES */
@@ -863,7 +872,6 @@ img {
 
 .hotel .button {
   font-weight: 700;
-  color: #ffffff;
   underline: none;
 }
 
