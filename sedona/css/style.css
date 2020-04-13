@@ -109,12 +109,11 @@ img {
   background-color: #ffffff;
 }
 
-.site-nav a {
-  display: inline-block;
-  width: 265px;
+.site-nav li {
   padding: 15px 5px;
-  box-sizing: border-box;
+}
 
+.site-nav a {
   font-weight: 700;
   color: #000000;
   text-align: left;
@@ -122,11 +121,11 @@ img {
 }
 
 .site-nav .nav-narrow {
-  width: 240px;
+  width: 210px;
 }
 
 .site-nav .nav-wide {
-  width: 290px;
+  width: 260px;
 }
 
 .site-nav .nav-right {
