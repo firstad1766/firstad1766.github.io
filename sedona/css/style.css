@@ -929,19 +929,32 @@ img {
 }
 
 .visit-sedona {
+  width: 400px;
+
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
   color: #000000;
+  text-align: center;
 }
 
 .footer-social ul {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  width: 150px;
+  justify-content: center;
+  width: 400px;
+  padding: 0;
+  box-sizing: border-box;
 
   list-style: none;
+}
+
+.footer-social li {
+  margin-right: 5px;
+}
+
+.footer-social li:last-child {
+  margin-right: 0;
 }
 
 .footer-social a {
@@ -961,12 +974,16 @@ img {
 
 .copyright {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  width: 200px;
+  width: 400px;
 
   line-height: 26px;
   color: #000000;
+}
+
+.copyright a {
+  margin-left: 10px;
 }
 
 .link_htmlacademy:hover path,
