@@ -730,6 +730,7 @@ img {
 }
 
 .extra-filters .found {
+  flex-shrink: 0;
   margin: 0;
   margin-right: 45px;
   padding: 0;
@@ -788,6 +789,7 @@ img {
 }
 
 .extra-filters .sort-direction {
+  flex-shrink: 0;
   margin-left: auto;
 }
 
