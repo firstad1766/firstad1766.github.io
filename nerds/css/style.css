@@ -243,7 +243,9 @@ position: relative;
 	width: 18px;
 	height: 18px;
 	margin-right: 15px;
-
+	
+	vertical-align: baseline;
+	
 	background-color: #ffffff;
 	border-radius: 50%;
 }
@@ -697,7 +699,9 @@ position: relative;
 
 .filter-cost .wrapper-max-cost {
 	display: inline-block;
-
+	
+	vertical-align: baseline;
+	
 	margin-left: 32px;
 }
 
@@ -1106,6 +1110,7 @@ position: relative;
 .map iframe {
 	width: 100vw;
 	min-width: 1160px;
+	height: 415px;
 	border: none;
 }
 
