@@ -1,0 +1,161 @@
+body {
+  min-width: 960px;
+  margin: 0;
+  padding: 0;
+
+  font-family:  "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+	position: absolute;
+
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+
+	white-space: nowrap;
+
+	-webkit-clip-path: inset(100%);
+
+	        clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+.container {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.button {
+
+}
+
+.button:hover,
+.button:focus {
+
+}
+
+.button:active {
+
+}
+
+.nav-top {
+  min-height: 40px;
+
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #ffffff;
+
+  background-color: #293449;
+}
+
+.nav-top .container {
+  display: flex;
+}
+
+.logo {
+  position: absolute;
+  display: block;
+  width: 220px;
+  height: 45px;
+  padding: 11px 55px;
+  box-sizing: border-box;
+
+  text-align: center;
+  vertical-align: middle;
+
+  background-color: #ee3643;
+  border: none;
+  box-shadow: inset 0 -5px rgba(0, 0, 0, 0.3);
+}
+
+.logo:hover,
+.logo:focus {
+  background-color: #ca2c37;
+}
+
+.logo:active {
+  background-color: #ba2732;
+}
+
+.logo img {
+  width: 110px;
+  height: 18px;
+}
+
+.site-search {
+  margin:0;
+  margin-left: 220px;
+  padding: 0;
+}
+
+.label-search{
+  display: flex;
+  height: 40px;
+
+  background-color: #293449;
+}
+
+.input-search {
+  width: 220px;
+  height: 40px;
+  margin: 0;
+  padding: 5px;
+  box-sizing: border-box;
+
+  font: inherit;
+  line-height: 18px;
+  font-weight: 400;
+  color: #ffffff;
+
+  background-color: #293449;
+  border: none;
+}
+
+.input-search::placeholder {
+  font: inherit;
+  line-height: 18px;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.site-search svg {
+  width: 17px;
+  height: 17px;
+  margin: 10px 10px 10px 15px;
+
+  opacity: 0.3;
+}
+
+.label-search:hover svg{
+  opacity: 1;
+}
+
+.input-search:focus,
+.input-search:active,
+.label-search:focus {
+  background-color: #ffffff;
+}
