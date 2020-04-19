@@ -60,6 +60,11 @@ input[type="radio"].visually-hidden {
 
 }
 
+.button:disabled,
+.button.disabled {
+
+}
+
 .nav-top {
   min-height: 40px;
 
@@ -74,11 +79,13 @@ input[type="radio"].visually-hidden {
 
 .nav-top .container {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .logo {
   position: absolute;
-  display: block;
+  top: 0;
   width: 220px;
   height: 45px;
   padding: 11px 55px;
@@ -107,23 +114,18 @@ input[type="radio"].visually-hidden {
 }
 
 .site-search {
+  position: relative;
   margin:0;
   margin-left: 220px;
   padding: 0;
 }
 
-.label-search{
-  display: flex;
-  height: 40px;
-
-  background-color: #293449;
-}
-
 .input-search {
-  width: 220px;
+  width: 270px;
   height: 40px;
   margin: 0;
   padding: 5px;
+  padding-left: 50px;
   box-sizing: border-box;
 
   font: inherit;
@@ -142,20 +144,108 @@ input[type="radio"].visually-hidden {
   color: #ffffff;
 }
 
+.input-search:hover {
+  background-color: #212a3a;
+}
+
+.input-search:focus {
+  color: #000000;
+
+  background-color: #ffffff;
+  outline: none;
+}
+
+.input-search:focus::placeholder{
+  color: #000000;
+}
+
 .site-search svg {
+  position: absolute;
+  left: 0;
   width: 17px;
   height: 17px;
-  margin: 10px 10px 10px 15px;
+  margin: 11px 10px 11px 15px;
 
   opacity: 0.3;
 }
 
-.label-search:hover svg{
+.input-search:hover + svg,
+.input-search:focus + svg {
   opacity: 1;
 }
 
-.input-search:focus,
-.input-search:active,
-.label-search:focus {
-  background-color: #ffffff;
+.input-search:focus + svg path {
+  fill: #ee3643;
+}
+
+.top-button {
+  position: relative;
+  width: 150px;
+  margin: 0;
+  padding: 11px;
+  padding-left: 45px;
+  box-sizing: border-box;
+
+  color: #ffffff;
+  text-align: left;
+}
+
+.bookmarks::before {
+  content: "";
+  position: absolute;
+  left: 15px;
+  width: 14px;
+  height: 16px;
+
+  background-image: url("../img/icon-bookmark.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+}
+
+.cart::before {
+  content: "";
+  position: absolute;
+  left: 15px;
+  width: 15px;
+  height: 15px;
+
+  background-image: url("../img/icon-cart.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+}
+
+.top-button:hover::before,
+.top-button:focus::before {
+  opacity: 1;
+}
+
+.top-button:active,
+.top-button:active::before {
+  opacity: 0.5;
+}
+
+.make-order {
+  position: relative;
+  width: 150px;
+  margin: 0;
+  padding: 11px 15px;
+  box-sizing: border-box;
+
+  color: #ffffff;
+  text-align: center;
+
+  background-color: #63a63e;
+}
+
+.make-order:hover,
+.make-order:focus {
+  background-color: #5fbb2d;
+  opacity: 1;
+}
+
+.make-order:active {
+  background-color: #518534;
+  opacity: 0.5;
 }
