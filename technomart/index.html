@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header>
+    <header class="main-header">
       <nav class="nav-top">
         <div class="container">
           <a class="logo">
@@ -24,10 +24,10 @@
           <a class="make-order" href="#">Оформить заказ</a>
         </div>
       </nav>
-      <div class="nav-middle">
-        <p class="description">Интернет-магазин строительных материалов и инструментов для ремонта</p>
+      <div class="nav-middle container">
+        <p class="description">Интернет-магазин строительных материалов <br> и инструментов для ремонта</p>
         <div class="nav-contacts">
-          <span class="phone">+7 (812) 555-05-55</span>
+          <p class="phone">+7 (812) 555-05-55</p>
           <p class="address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </div>
         <div class="user-account">
@@ -35,17 +35,23 @@
             <a href="#" class="log-in">Войти</a>
             <a href="#" class="registration">Регистрация</a>
           </div>
-          <div class="authorized">
-            <div>
-              <a href="#">Равшан Джамшутович</a>
-              <a href="#"><span class="visually-hidden">Выйти из личного кабинета</span></a>
+          <div class="authorized account-hidden">
+            <div class="first-row">
+              <a href="#" class="fullname">Равшан Джамшутович</a>
+              <a href="#" class="log-out">
+                <span class="visually-hidden">Выйти из личного кабинета</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="17" viewBox="0 0 21 17"><g fill="#c5c5c5">
+                  <path fill="#c5c5c5" d="M21 8.5L12.125 0v6h-6v5h6v6z"/><path fill="#c5c5c5" d="M3.106 13.952V3.048c.018-.376.171-1.057 1.01-1.057h5.027V0H4.116C1.938 0 1.112 1.81 1.087 3.027v10.946C1.112 15.189 1.938 17 4.116 17h5.027v-1.99H4.116c-.839 0-.992-.683-1.01-1.058z"/></g></svg>
+              </a>
             </div>
-            <a href="#">Мои заказы</a>
-            <a href="#">Личный кабинет</a>
+            <a href="#" class="user-link">Мои заказы</a>
+            <img src="img/decor.svg" alt="decor" width="4" height="5">
+            <a href="#" class="user-link">Личный кабинет</a>
+          </div>
         </div>
       </div>
       <nav class="nav-bottom">
-        <ul>
+        <ul class="container">
           <li><a class="current-page">Главная</a></li>
           <li><a href="#">Компания</a></li>
           <li><a href="catalog.html">Каталог</a></li>
@@ -57,52 +63,50 @@
       </nav>
     </header>
     <main>
-      <section class="most-popular">
-      <h1 class="visually-hidden">Интернет-магазин Техномарт</h1>
-      <ul class="most-popular-grid">
-        <li class="yellow new">
-          <h2>Материалы</h2>
-          <a href="#">на любой вкус</a>
-        </li>
-        <li class="blue">
-          <h2>Инструмент</h2>
-          <a href="#">на все случаи</a>
-        </li>
-        <li class="violet">
-          <h2>Техника</h2>
-          <a href="#">для стройки</a>
-        </li>
-        <li class="green">
-          <h2>Скидки 50%</h2>
-          <a href="#">На 350 товаров</a>
-        </li>
-        <li class="yellow">
-          <h2>Доставка</h2>
-          <a href="#">бесплатно</a>
-        </li>
-        <li class="slider">
-          <div class="slide slide-current">
-            <h2>Перфораторы</h2>
-            <p>Настоящие мужские игрушки</p>
-            <a href="#" class="button">открыть каталог</a>
+      <section class="most-popular container">
+        <h1 class="visually-hidden">Интернет-магазин Техномарт</h1>
+        <div class="most-popular-grid">
+          <div class="yellow material new">
+            <h2>Материалы</h2>
+            <a href="#" class="button">на любой вкус</a>
           </div>
-          <div class="slide">
-            <h2>Дрели</h2>
-            <p>Соседям на радость!</p>
-            <a href="#" class="button">открыть каталог</a>
+          <div class="blue instruments">
+            <h2>Инструмент</h2>
+            <a href="#" class="button">на все случаи</a>
           </div>
-          <svg class="previous">
-
-          </svg>
-          <svg class="next">
-
-          </svg>
-          <div class="switcher-1 switcher-cuttent"></div>
-          <div class="switcher-2"></div>
-        </li>
-      </ul>
+          <div class="violet equipment">
+            <h2>Техника</h2>
+            <a href="#" class="button">для стройки</a>
+          </div>
+          <div class="slider">
+            <div class="slide slide-current">
+              <h2>Перфораторы</h2>
+              <p>Настоящие мужские игрушки</p>
+              <a href="#" class="button">открыть каталог</a>
+            </div>
+            <div class="slide">
+              <h2>Дрели</h2>
+              <p>Соседям на радость!</p>
+              <a href="#" class="button">открыть каталог</a>
+            </div>
+            <button type="button" class="arrow previous">Назад</button>
+            <button type="button" class="arrow next">Вперед</button>
+            <div class="switcher-1 switcher-cuttent"></div>
+            <div class="switcher-2"></div>
+          </div>
+          <div class="right-column">
+            <div class="green discount">
+              <h2>Скидки 50%</h2>
+              <a href="#" class="button">На 350 товаров</a>
+            </div>
+            <div class="yellow delivery">
+              <h2>Доставка</h2>
+              <a href="#" class="button">бесплатно</a>
+            </div>
+          </div>
+        </div>
       </section>
-      <section class="popular-products">
+      <section class="popular-products container">
         <div class="heading-wrapper">
           <h2>Популярные товары:</h2>
           <a href="#" class="button">все популярные товары</a>
@@ -134,7 +138,7 @@
           </li>
         </ul>
       </section>
-      <section class="popular-brands">
+      <section class="popular-brands container">
         <div class="heading-wrapper">
           <h2>Популярные производители:</h2>
           <a href="#" class="button">все производители</a>
