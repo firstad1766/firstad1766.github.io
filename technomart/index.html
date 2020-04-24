@@ -66,9 +66,10 @@
       <section class="most-popular container">
         <h1 class="visually-hidden">Интернет-магазин Техномарт</h1>
         <div class="most-popular-grid">
-          <div class="yellow material new">
+          <div class="yellow material">
             <h2>Материалы</h2>
             <a href="#" class="button">на любой вкус</a>
+            <span class="new"></span>
           </div>
           <div class="blue instruments">
             <h2>Инструмент</h2>
@@ -91,8 +92,14 @@
             </div>
             <button type="button" class="arrow previous">Назад</button>
             <button type="button" class="arrow next">Вперед</button>
-            <div class="switcher-1 switcher-cuttent"></div>
-            <div class="switcher-2"></div>
+            <ul class="switchers">
+              <li>
+                <button type="button" class="switcher switcher-current">слайд 1</button>
+              </li>
+              <li>
+                <button type="button" class="switcher">слайд 2</button>
+              </li>
+            </ul>
           </div>
           <div class="right-column">
             <div class="green discount">
@@ -114,19 +121,19 @@
         <ul class="products">
           <li>
             <img src="img/product-1.jpg" alt="Перфоратор BOSCH BFG 9000">
-            <h3>Перфоратор BOSCH BFG 9000</h3>
+            <h3>Перфоратор BOSCH <br> BFG 9000</h3>
             <span class="previous-price">32500 Р.</span>
             <span class="new-price">25500 Р.</span>
           </li>
           <li>
             <img src="img/product-2.jpg" alt="Перфоратор BOSCH BFG 3000">
-            <h3>Перфоратор BOSCH BFG 3000</h3>
+            <h3>Перфоратор BOSCH <br> BFG 3000</h3>
             <span class="previous-price">22500 Р.</span>
             <span class="new-price">15500 Р.</span>
           </li>
           <li>
             <img src="img/product-3.jpg" alt="Перфоратор BOSCH BFG 6000">
-            <h3>Перфоратор BOSCH BFG 6000</h3>
+            <h3>Перфоратор BOSCH <br> BFG 6000</h3>
             <span class="previous-price">30500 Р.</span>
             <span class="new-price">25500 Р.</span>
           </li>
@@ -135,6 +142,7 @@
             <h3>Перфоратор BOSCH BFG 2000</h3>
             <span class="previous-price"></span>
             <span class="new-price">12500 Р.</span>
+            <span class="new"></span>
           </li>
         </ul>
       </section>
@@ -171,37 +179,39 @@
         </ul>
       </section>
       <section class="services">
-        <h2>Сервисы</h2>
-        <p>Хороший интернет-магазин отличается от плохого не только ценами! <br> Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
-        </p>
-        <ul class="services-menu">
-          <li>
-            <a  class="service-current">Доставка</a>
-            <div class="delivery-description service">
-              <h3>Доставка</h3>
-              <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж!</p>
-              <img src="img/truck.png" alt="truck">
+        <div class="container">
+          <h2>Сервисы</h2>
+          <p>Хороший интернет-магазин отличается от плохого не только ценами! <br> Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
+          </p>
+          <ul class="services-menu">
+            <li>
+              <a  class="service-current">Доставка</a>
+              <div class="delivery-description service">
+                <h3>Доставка</h3>
+                <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж!</p>
+                <img src="img/truck.png" alt="truck">
+              </div>
+            </li>
+            <li>
+              <a href="#">Гарантия</a>
+              <div class="guarantee-description service">
+                <h3>Гарантия</h3>
+                <p>Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгаранием,  вы всегда можете быть уверены в нашей гарантии.
+                 Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.</p>
+                <img src="img/medal.png" alt="medal">
             </div>
-          </li>
-          <li>
-            <a href="#">Гарантия</a>
-            <div class="guarantee-description service">
-              <h3>Гарантия</h3>
-              <p>Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгаранием,  вы всегда можете быть уверены в нашей гарантии.
-               Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.</p>
-              <img src="img/medal.png" alt="medal">
-          </div>
-          </li>
-          <li>
-            <a href="#">Кредит</a>
-            <div class="credit-description service">
-              <h3>Кредит</h3>
-              <p>Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.</p>
-              <a href="#" class="button">отправить заявку</a>
-              <img src="img/credit.png" alt="credit">
-            </div>
-          </li>
-        </ul>
+            </li>
+            <li>
+              <a href="#">Кредит</a>
+              <div class="credit-description service">
+                <h3>Кредит</h3>
+                <p>Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.</p>
+                <a href="#" class="button">отправить заявку</a>
+                <img src="img/credit.png" alt="credit">
+              </div>
+            </li>
+          </ul>
+        </div>
       </section>
       <section class="info">
         <div class="about-us">
