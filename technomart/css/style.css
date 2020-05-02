@@ -223,6 +223,10 @@ input[type="radio"].visually-hidden {
   text-align: left;
 }
 
+.top-button.red {
+  background-color: #ee3643;
+}
+
 .bookmarks::before {
   content: "";
   position: absolute;
@@ -249,9 +253,18 @@ input[type="radio"].visually-hidden {
   opacity: 0.3;
 }
 
+.top-button:hover,
+.top-button:focus {
+  background-color: #212a3a;
+}
+
 .top-button:hover::before,
 .top-button:focus::before {
   opacity: 1;
+}
+
+.top-button:active {
+  background-color: #161d29;
 }
 
 .top-button:active,
@@ -506,18 +519,16 @@ input[type="radio"].visually-hidden {
 
 /*heder-bottom*/
 .nav-bottom {
-  background-color: #32425c;
-  box-shadow: inset 0 -5px #293449;
-}
-
-.nav-bottom  ul {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   padding: 0;
 
   list-style: none;
+
+  background-color: #32425c;
+  box-shadow: inset 0 -5px #293449;
 }
 
 .nav-bottom  li {
@@ -1325,6 +1336,439 @@ input[type="radio"].visually-hidden {
   margin-bottom: 40px;
 }
 
+/*inner-page*/
+.inner-page .main-header {
+  margin-bottom: 20px;
+}
+
+.breadcrumbs {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+
+  list-style: none;
+}
+
+.breadcrumbs li:not(:last-child) {
+  position: relative;
+  margin-right: 40px;
+}
+
+.breadcrumbs li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: -23px;
+  top: 50%;
+  width: 8px;
+  height: 12px;
+  margin-top: -6px;
+
+  background-image: url("../img/icon-right-small.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.breadcrumbs a {
+  line-height: 18px;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.page-title {
+  display: block;
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 30px;
+
+  font-family: "Cuprum", Arial Narrow, sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #32425c;
+  text-transform: uppercase;
+
+  background-color: #f2f6f8;
+}
+
+/*inner-catalog*/
+.catalog-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+.filters {
+  width: 220px;
+}
+
+.filters h2 {
+  display: block;
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  text-align: left;
+  text-transform: uppercase;
+
+  background-color: #f7f3ec;
+  border: none;
+  border-radius: 3px;
+}
+
+.form-filters fieldset {
+  position: relative;
+  margin: 0;
+  margin-bottom: 45px;
+  padding: 0;
+
+  border: none;
+}
+
+.form-filters fieldset:not(:first-child)::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  width: 220px;
+  height: 1px;
+
+  background-color: #e5e5e5;
+}
+
+.form-filters legend {
+  margin-bottom: 10px;
+  padding: 0;
+
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.range-wrapper {
+  width: 220px;
+  height: 80px;
+  margin-bottom: 10px;
+
+  background-color: #f7f3ec;
+  border: none;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.inputs-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 17px;
+  line-height: 18px;
+}
+
+.min-cost,
+.max-cost {
+  width: 95px;
+  height: 38px;
+
+  font: inherit;
+  font-size: 17px;
+  line-height: 18px;
+  text-align: center;
+
+  background-color: #f7f3ec;
+  border: none;
+  border-radius: 3px;
+}
+
+.form-filters ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.form-filters label {
+  position: relative;
+  padding-left: 35px;
+
+  font-size:15px;
+  line-height: 20px;
+  text-transform: uppercase;
+
+  cursor: pointer;
+}
+
+.form-filters li:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.form-filters label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 25px;
+  height: 25px;
+  box-sizing: border-box;
+
+  background-color: transparent;
+}
+
+.checkbox-list label::before {
+  top: -2px;
+
+  border: solid 2px #c5c5c5;
+  border-radius: 3px;
+}
+
+
+.radio-list label::before {
+  top: -5px;
+
+  border: solid 4px #c5c5c5;
+  border-radius: 50%;
+}
+
+.form-filters label:hover::before,
+.form-filters + label:hover::after  {
+  border-color: #b5b5b5;
+}
+
+.filter-checkbox:disabled + label,
+.filter-radio:disabled + label {
+  cursor: default;
+}
+
+.filter-checkbox:disabled + label::before,
+.filter-radio:disabled + label::before,
+.filter-checkbox.disabled + label::before,
+.filter-radio.disabled + label::before {
+  border-color: #c5c5c5;
+  opacity: 0.3;
+}
+
+.filter-checkbox:checked + label::before {
+  width: 27px;
+  height: 23px;
+
+  border: none;
+  background-image: url("../img/checkbox-on.png");
+}
+
+.filter-checkbox:checked + label:hover::before {
+  background-image: url("../img/checkbox-hover.png");
+}
+
+.filter-radio:checked + label::after {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 3px;
+  width: 9px;
+  height: 9px;
+
+  background-color: #c5c5c5;
+  border: none;
+  border-radius: 50%;
+}
+
+.filter-radio:checked + label:hover::after {
+  background-color: #b5b5b5;
+}
+
+.form-filters .button {
+  width: 138px;
+  height: 36px;
+
+  font-family:  "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  color: #000000;
+
+  background-color: transparent;
+  border: solid 1px #e5e5e5;
+}
+
+.form-filters .button:hover,
+.form-filters .button:focus {
+  border-color: #bdc6ca;
+}
+
+.form-filters .button:active {
+  border-color: #ee3643;
+}
+
+.sort-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 700px;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  text-align: left;
+  text-transform: uppercase;
+
+  background-color: #f7f3ec;
+  border: none;
+  border-radius: 3px;
+}
+
+.sort-wrapper h2 {
+  margin: 0;
+  margin-right: 140px;
+
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.sort {
+  display: flex;
+  justify-content: space-between;
+  width: 355px;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.sort a {
+  color: rgba(0, 0, 0, 0.3);
+  border-bottom: dotted 1px #ee3643;
+}
+
+.sort a:hover,
+.sort a:focus {
+  color: #000000;
+  border-bottom-style: solid;
+}
+
+.sort a:active,
+.sort .current-sort {
+  color: #ee3643;
+  border: none;
+}
+
+.sort-direction {
+  display: flex;
+  justify-content: space-between;
+  width: 45px;
+  margin: 0;
+  margin-left: 40px;
+  padding: 0;
+
+  list-style: none;
+}
+
+.direction path {
+  fill: #c5c5c5;
+}
+
+.direction:hover path,
+.direction:focus path {
+  fill: #000000;
+}
+
+.direction:active path,
+.current-direction path {
+  fill: #ee3643;
+}
+
+.catalog .catalog-list {
+  flex-shrink: 0;
+  width: 700px;
+  margin-bottom: 30px;
+}
+
+.catalog-list li {
+  margin-bottom: 20px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.pagination li:not(:last-child) {
+  margin-right: 10px;
+}
+
+.pagination a {
+  display: block;
+  width: 38px;
+  height: 38px;
+  padding: 10px 5px;
+  box-sizing: border-box;
+
+  line-height: 18px;
+  color: #000000;
+  text-transform: uppercase;
+  text-align: center;
+
+  background-color: transparent;
+  border: solid 1px #e5e5e5;
+  border-radius: 3px;
+}
+
+.pagination li:last-child a {
+  width: 140px;
+}
+
+.pagination a:hover,
+.pagination a:focus {
+  border-color: #bdc6ca;
+}
+
+.pagination a:active {
+  border-color: #ee3643;
+}
+
+.pagination .current-pagination {
+  color: #ffffff;
+
+  background-color: #ee3643;
+  border-color: #ee3643;
+}
+
+.about-product {
+  background-color: #f2f6f8;
+}
+
+.about-product .container {
+  padding: 65px 0 70px 0;
+}
+
+.about-product h2 {
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+
+  font-family: "Cuprum", Arial Narrow, sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #32425c;
+  text-transform: uppercase;
+}
+
+/*footer*/
 .main-footer {
   background-color: #32425c;
 }
