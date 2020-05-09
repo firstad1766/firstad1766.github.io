@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
 
-  font-family:  "PT Sans", Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
   font-weight: 400;
@@ -1926,4 +1926,163 @@ input[type="radio"].visually-hidden {
 .designed a:active {
   color: #ee3643;
   text-decoration: none;
+}
+
+/* modal*/
+.modal {
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+
+  background-color: #ffffff;
+  border: none;
+  border-top: solid 7px #ff5257;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.75);
+}
+
+.close-modal {
+  display: block;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+
+  font-size: 0;
+  line-height: 0;
+
+  background: transparent;
+
+  cursor: pointer;
+}
+
+.close-modal::before,
+.close-modal::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  width: 27px;
+  height: 4px;
+
+  background-color: #ee3643;
+  border: none;
+  border-radius: 2px;
+}
+
+.close-modal::before {
+  transform: rotate(45deg);
+}
+
+.close-modal::after {
+  transform: rotate(-45deg);
+}
+
+.modal-map {
+  display: none;
+
+  width: 940px;
+  height: 445px;
+  margin-top: -222px;
+  margin-left: -470px;
+
+  border: none;
+  box-shadow: 0 0 16px 8px rgba(0, 0, 0, 0.5);
+}
+
+.modal-map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 940px;
+  height: 445px;
+  margin: 0;
+  padding: 0;
+
+  border: none;
+}
+
+.modal-write-us {
+  display: none;
+  width: 620px;
+  margin-top: -215px;
+  margin-left: -310px;
+  padding: 0;
+  box-sizing: border-box;
+
+  background-color: #ffffff;
+}
+
+.modal-write-us .form-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 45px 80px 40px 80px;
+}
+
+.modal-write-us p {
+  margin: 0;
+  padding: 0;
+}
+
+.modal-write-us form,
+.modal-write-us label,
+.modal-write-us input[type="text"],
+.modal-write-us input[type="email"] {
+  font-family: "Cuprum", Arial Narrow, sans-serif;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #000000;
+}
+
+.modal-write-us label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.modal-write-us input[type="text"],
+.modal-write-us input[type="email"] {
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  width: 220px;
+  height: 38px;
+  box-sizing: border-box;
+
+  background-color: #ffffff;
+  border: solid 2px #dee3e4;
+  border-radius: 2px;
+}
+
+.modal-write-us textarea {
+  padding: 10px 15px;
+  width: 460px;
+  max-width: 460px;
+  height: 115px;
+  box-sizing: border-box;
+
+  background-color: #ffffff;
+  border: solid 2px #dee3e4;
+  border-radius: 2px;
+}
+
+.modal-write-us input[type="text"]::placeholder,
+.modal-write-us input[type="email"]::placeholder,
+.modal-write-us textarea::placeholder {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #a9a9a9;
+}
+
+.modal-write-us .form-bottom {
+  padding: 40px 80px;
+  background-color: #f4f4f4;
+}
+
+.modal-write-us .button {
+  width: 100%;
 }
