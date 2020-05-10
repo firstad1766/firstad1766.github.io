@@ -2010,8 +2010,6 @@ input[type="radio"].visually-hidden {
   margin-left: -310px;
   padding: 0;
   box-sizing: border-box;
-
-  background-color: #ffffff;
 }
 
 .modal-write-us .form-top {
@@ -2085,4 +2083,61 @@ input[type="radio"].visually-hidden {
 
 .modal-write-us .button {
   width: 100%;
+}
+
+.modal-cart {
+  display: none;
+  width:620px;
+  margin-left: -310px;;
+  margin-top: -140px;
+}
+
+.modal-cart p {
+  position: relative;
+  margin: 70px 80px;
+  padding-left: 100px;
+
+  font-family: "Cuprum", Arial Narrow, sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #000000;
+}
+
+.modal-cart p::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -20px;
+  width: 66px;
+  height: 66px;
+
+background-image: url("../img/added.png");
+background-position: 0 0;
+background-repeat: no-repeat;
+}
+
+.modal-cart .button-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 80px;
+
+  background-color: #f1f1f1;
+}
+
+.button-wrapper .button {
+  width: 220px;
+}
+
+.button-wrapper .continue {
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
+.button-wrapper .continue:hover,
+.button-wrapper .continue:focus,
+.button-wrapper .continue:active {
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
 }
