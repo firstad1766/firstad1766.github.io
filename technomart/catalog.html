@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <title>Техномарт</title>
     <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="css/normalize.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/jquery-ui.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="inner-page">
@@ -96,9 +98,9 @@
                   <div id="range"></div>
                 </div>
                 <div class="inputs-wrapper">
-                  <input type="text" class="min-cost" name="min-cost" value="0">
+                  <input type="text" class="min-cost" name="min-cost">
                   —
-                  <input type="text" class="max-cost" name="max-cost" value="30000">
+                  <input type="text" class="max-cost" name="max-cost">
                 </div>
               </fieldset>
               <fieldset>
@@ -375,6 +377,10 @@
       <span class="modal-close">Закрыть</span>
     </section>
 
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/filter-range.js"></script>
     <script src="js/catalog.js"></script>
   </body>
 </html>

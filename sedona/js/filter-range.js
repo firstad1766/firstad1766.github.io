@@ -18,7 +18,7 @@ $("#cost-max").val($("#cost-range").slider( "values", 1 ));
 });
 $('#cost-min').change(function() {
 var val = $(this).val();
-$('#slider_price').slider("values",0,val);
+$('#cost-range').slider("values",0,val);
 });
 
 $('#cost-max').change(function() {
