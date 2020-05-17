@@ -717,14 +717,15 @@ input[type="radio"].visually-hidden {
 .slider .slide-current {
   z-index: 2;
 }
-.slider .slide:first-child {
+
+.slider .slide-1 {
   background-image: url("../img/slider1.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.slider .slide:nth-child(2) {
+.slider .slide-2 {
   background-image: url("../img/slider2.jpg");
   background-size: cover;
   background-position: center;
@@ -813,6 +814,7 @@ input[type="radio"].visually-hidden {
 
 .switchers .switcher {
   position: relative;
+  display: block;
   width: 10px;
   height: 10px;
   padding: 0;
@@ -824,11 +826,7 @@ input[type="radio"].visually-hidden {
   border-radius: 50%;
   outline: none;
 
-  cursor: pointer;
-}
-
-.switchers .switcher:focus {
-  outline: 1px solid rgb(77, 144, 254);
+  cursor: default;
 }
 
 .switchers .switcher-current::after {
@@ -1159,18 +1157,23 @@ input[type="radio"].visually-hidden {
   border: none;
 }
 
-.services-menu a:hover,
-.services-menu a:focus {
+.services-menu a:hover {
   color: #ffffff;
 
   background-color: #293449;
 }
 
+.services-menu a:focus,
 .services-menu a:active,
 .services-menu .service-current {
   color: #32425c;
 
   background-color: #ffffff;
+  outline: none;
+}
+
+.services-menu .service-current {
+  cursor: default;
 }
 
 .service {
@@ -1235,6 +1238,8 @@ input[type="radio"].visually-hidden {
 
 .credit-description .button:hover,
 .credit-description .button:focus {
+  color: #ffffff;
+  
   background-color: #ca2c37;
   outline: none;
 }
