@@ -561,7 +561,7 @@ input[type="radio"].visually-hidden {
 
 /*main-index*/
 .most-popular {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 .most-popular-grid {
   display: flex;
@@ -575,8 +575,7 @@ input[type="radio"].visually-hidden {
   width: 300px;
   height: 125px;
   margin-bottom: 20px;
-  padding: 20px;
-  padding-right: 140px;
+  padding: 20px 140px 25px 25px;
   box-sizing: border-box;
 
   overflow: hidden;
@@ -861,7 +860,7 @@ input[type="radio"].visually-hidden {
 }
 
 .popular-products {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .heading-wrapper {
@@ -1047,7 +1046,7 @@ input[type="radio"].visually-hidden {
 }
 
 .popular-brands {
-  margin-bottom: 65px;
+  margin-bottom: 60px;
 }
 
 .brands li {
@@ -1090,7 +1089,7 @@ input[type="radio"].visually-hidden {
 }
 
 .services h2 {
-  margin: 0
+  margin: 0;
   margin-bottom: 30px;
   padding: 0;
 
@@ -1104,7 +1103,7 @@ input[type="radio"].visually-hidden {
 
  .services p {
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   padding: 0;
 }
 
@@ -1112,7 +1111,7 @@ input[type="radio"].visually-hidden {
   position: relative;
   min-height: 280px;
   margin: 0;
-  margin-bottom: 75px;
+  margin-bottom: 80px;
   padding: 0;
   padding-top: 50px;
 
@@ -1239,7 +1238,7 @@ input[type="radio"].visually-hidden {
 .credit-description .button:hover,
 .credit-description .button:focus {
   color: #ffffff;
-  
+
   background-color: #ca2c37;
   outline: none;
 }
@@ -1276,7 +1275,7 @@ input[type="radio"].visually-hidden {
 
 .info p {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   padding: 0;
 }
 
@@ -1284,12 +1283,12 @@ input[type="radio"].visually-hidden {
   width: 560px;
 }
 .about-us .before-ul {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .about-us ul {
   margin: 0;
-  margin-bottom: 45px;
+  margin-bottom: 35px;
   padding: 0;
 
   font-family: "Cuprum", Arial Narrow, sans-serif;
@@ -1333,12 +1332,16 @@ input[type="radio"].visually-hidden {
 }
 
 .contacts p {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .contacts .show-map {
   display: block;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
+}
+
+.contacts .button {
+  width: 100%;
 }
 
 /*inner-page*/
@@ -1351,7 +1354,7 @@ input[type="radio"].visually-hidden {
   justify-content: flex-start;
   align-items: center;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   padding: 0;
 
   list-style: none;
@@ -1500,6 +1503,10 @@ input[type="radio"].visually-hidden {
   list-style: none;
 }
 
+.form-filters .radio-list {
+  margin-bottom: 35px;
+}
+
 .form-filters label {
   position: relative;
   padding-left: 35px;
@@ -1512,7 +1519,7 @@ input[type="radio"].visually-hidden {
 }
 
 .form-filters li:not(:last-child) {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .form-filters label::before {
@@ -1761,12 +1768,12 @@ input[type="radio"].visually-hidden {
 }
 
 .about-product .container {
-  padding: 65px 0 70px 0;
+  padding: 65px 0 60px 0;
 }
 
 .about-product h2 {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   padding: 0;
 
   font-family: "Cuprum", Arial Narrow, sans-serif;
@@ -1794,7 +1801,7 @@ input[type="radio"].visually-hidden {
 
 .footer-logo {
   width: 220px;
-  height: 72px;
+  height: 68px;
   margin-bottom: 25px;
 }
 
