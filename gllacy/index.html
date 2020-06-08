@@ -203,7 +203,6 @@
         <article class="blog">
           <h2>Новое в нашем блоге</h2>
           <p>10 способов сервировки <br> фруктовых щербетов к <br> столу</p>
-          <img src="img/blog-bg.jpg" width="560" height="220"  alt="10 способов сервировки фруктовых щербетов к столу">
         </article>
         <article class="subscribe">
           <h2 class="visually-hidden">Подписаться на рассылку</h2>
@@ -227,6 +226,18 @@
           <a href="tel:+78124502525">8 812 450-25-25</a>
           (с 10 до 20 ежедневно)
           <button type="button" name="write-us" class="write-us-link button">Форма обратной связи</button>
+          <div class="overlay"></div>
+          <form class="modal write-us" action="https://echo.htmlacademy.ru" method="post">
+            <h3>Мы обязательно вам ответим!</h3>
+            <label for="u-name" class="visually-hidden">Ваше имя</label>
+            <input type="text" id="u-name" name="user-name" value="" placeholder="Как вас зовут?">
+            <label for="u-email" class="visually-hidden">Ваш e-mail</label>
+            <input type="email" id="u-email" name="user-email" value="" placeholder="Ваша почта для ответа?">
+            <label for="u-message" class="visually-hidden">Ваше сообщение</label>
+            <textarea id="u-message" name="message" placeholder="Напишите что-нибудь..."></textarea>
+            <button type="submit" class="button send">Отправить</button>
+            <button type="button" class="close-modal">Закрыть</button>
+          </form>
         </div>
       </section>
       </main>
